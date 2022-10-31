@@ -37,14 +37,14 @@ is missing.
  - build the docker image - `docker build -t newyorker .`
  - Run below commands in order
  - For Ingestion
-			 - ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity user --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
-			 - ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity business --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
-			 - ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity tip --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
-			 - ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity checkin --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
-			 - ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity review --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
+	-  `docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity user --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
+	-  `docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity business --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
+	- ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity tip --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
+	- ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity checkin --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
+	- ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local ingestion/app.py --entity review --input-path /app/yelp_dataset --output-path /app/output --execution-date "2022-10-31"`
 
  - For aggregation
-		 - ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local aggregation/app.py  --input-path /app/output --output-path /app/output/aggregated_data --execution-date "2022-10-31"`
+	- ` docker run -d -v $(pwd):/app newyorker /opt/spark/bin/spark-submit --master local aggregation/app.py  --input-path /app/output --output-path /app/output/aggregated_data --execution-date "2022-10-31"`
 
 ## To imporve
 
